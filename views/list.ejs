@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生信息列表</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2" style="margin-top: 50px;">
+                <table class="table">
+                    <tr>
+                        <th>编号</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>年龄</th>
+                        <th></th>
+                    </tr>
+                    <% for(let i=0;i < students.length; i++){ %>
+                        <tr>
+                            <td><%= students[i].stuId %></td>
+                            <td><%= students[i].stuName %></td>
+                            <td><%= students[i].stuSex %></td>
+                            <td><%= students[i].stuAge %></td>
+                            <td>
+                                <a class="btn btn-default" href="/update/<%= students[i].stuId %>" role="button">修改</a>
+                                <a class="btn btn-danger" href="/delete/<%= students[i].stuId %>" role="button">删除</a>
+                            </td>
+                        </tr>
+                    <%}%>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-8">
+                <button  type="button" class="btn btn-success">增加</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/myjs.js"></script>
+</html>

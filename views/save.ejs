@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改学生信息列表</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3" style="margin-top: 100px;">
+                <form action="http://localhost:7000/save" method="post">
+                    <div class="form-group">
+                        <input type="hidden" class="form-control" name="stuId" id="stuId" 
+                            value="<%= student.stuId %>" placeholder="编号">
+                    </div>
+                    <div class="form-group">
+                        <label for="stuName">姓名</label>
+                        <input id = "foobar" type="text" class="form-control" name="stuName" id="stuName"
+                            placeholder="姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="stuSex1">性别</label>
+                        <% if(student.stuSex=="男"){ %>
+                            <input type="radio" name="stuSex" id="stuSex1" value="1" checked>男
+                            <input type="radio" name="stuSex" id="stuSex2" value="2">女
+                        <%}else{%>
+                            <input type="radio" name="stuSex" id="stuSex1" value="1">男
+                            <input type="radio" name="stuSex" id="stuSex2" value="2" checked>女
+                        <%}%>
+                    </div>
+                    <div class="form-group">
+                        <label for="stuAge">年龄</label>
+                        <input type="number" class="form-control" name="stuAge" id="stuAge"
+                            value="<%= student.stuAge %>" placeholder="年龄">
+                    </div>
+                    <button type="submit" class="btn btn-default">修改</button>
+                    <button type="submit" class="btn btn-default">取消</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../public/js/jquery-1.12.4.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script src="../public/js/myjs.js"></script>
+<script>
+    document.getElementById("foobar").setAttribute("src",getLocalTime() );
+    var stuId = function getLocalTime() {  
+        return new Date().getTime();   
+      
+15     } 
+    </script>
+</html>
