@@ -1,8 +1,9 @@
-const { $where } = require("F:/files/wangzi/mymodule/studentModel");
 
+console.log("btn-success111");
 $(function(){
-    $("btn-success").on("click",function(){
-        window.location.href="./save.html";
+    $(".btn-success").on("click",function(){
+        console.log("btn-success");
+        window.location.href="/save.html";
     });
 });
 
