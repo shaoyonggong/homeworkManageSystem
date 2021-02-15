@@ -1,0 +1,7 @@
+[
+    {"stuId":1,"stuName":"张三1","stuSex":"男","stuAge":20},
+    {"stuId":2,"stuName":"张三2","stuSex":"女","stuAge":21},
+    {"stuId":3,"stuName":"张三3","stuSex":"男","stuAge":22},
+    {"stuId":4,"stuName":"张三4","stuSex":"女","stuAge":23},
+    {"stuId":5,"stuName":"张三5","stuSex":"男","stuAge":24}
+]
